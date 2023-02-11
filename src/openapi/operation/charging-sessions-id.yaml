@@ -1,0 +1,45 @@
+patch:
+  parameters:
+    - in: path
+      name: sessionId
+      required: true
+      schema:
+        type: integer
+        format: int64
+        description: ID of started charging session
+    - in: header
+      name: If-Match
+      required: true
+      schema:
+        type: string
+        maxLength: 10
+        description: eTag value
+  operationId: endSession
+  description: "End charging session"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/EndSessionRequest.json'
+  responses:
+    204:
+      description: Operation successfully, without content
+    400:
+      description: Bad request
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
+    404:
+      description: Session not found
+      content:
+        application/json:
+          schema:
+            $ref: 'model/ErrorResponse.json'
+    500:
+      description: internal error
+      content:
+        application/json:
+          schema:
+            $ref: 'model/ErrorResponse.json'

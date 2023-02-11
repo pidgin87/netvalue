@@ -1,0 +1,35 @@
+### Send POST request: get all charging sessions
+POST http://localhost:8080/charging-sessions/filters
+Accept: application/json
+Content-Type: application/json
+Authorization: Basic admin password
+
+### Send POST request: get all charging sessions
+POST http://localhost:8080/charging-sessions/filters
+Accept: application/json
+If-Modified-Since: Sat, 11 Feb 2023 20:01:23 GMT
+Content-Type: application/json
+Authorization: Basic admin password
+
+### Send POST request: get charging sessions with filter by period
+POST http://localhost:8080/charging-sessions/filters
+Accept: application/json
+Content-Type: application/json
+Authorization: Basic admin password
+
+{
+    "dateFrom": "2022-01-01",
+    "dateTo": "2024-01-02"
+}
+
+### Send POST request: get charging sessions with filter by period
+POST http://localhost:8080/charging-sessions/filters
+Accept: application/json
+If-Modified-Since: Sat, 11 Feb 2023 20:01:23 GMT
+Content-Type: application/json
+Authorization: Basic admin password
+
+{
+    "dateFrom": "2022-01-01",
+    "dateTo": "2024-01-02"
+}

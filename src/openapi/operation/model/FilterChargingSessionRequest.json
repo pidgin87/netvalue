@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "title": "FilterChargingSessionResponse",
+    "description": "Response with charging session",
+    "properties": {
+        "dateFrom": {
+            "type": "string",
+            "format": "date"
+        },
+        "dateTo": {
+            "type": "string",
+            "format": "date"
+        }
+    }
+}

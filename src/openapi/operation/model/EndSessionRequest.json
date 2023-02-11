@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "title": "EndSessionRequest",
+    "description": "Request for end charging session",
+    "properties": {
+        "endMeter": {
+            "type": "integer",
+            "description": "Meter value after charging (Wh)",
+            "min": 0
+        },
+        "errorMessage": {
+            "type": "string",
+            "description": "Error message if error occurred",
+            "maxLength": 1000
+        }
+    }
+}

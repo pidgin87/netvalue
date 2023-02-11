@@ -1,0 +1,8 @@
+### Send GET request: get version
+GET http://localhost:8080/versions
+Accept: application/json
+
+### Send GET request: get version
+GET http://localhost:8080/versions
+Accept: application/json
+If-None-Match: "001d322732d1f38268bcfa1015da6c467"

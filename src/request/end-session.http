@@ -1,0 +1,21 @@
+### Send PATCH request: end charging session
+PATCH http://localhost:8080/charging-sessions/5
+Accept: application/json
+If-Match: 0
+Content-Type: application/json
+Authorization: Basic customer password
+
+{
+    "endMeter": 15
+}
+
+### Send PATCH request: end charging session with error
+PATCH http://localhost:8080/charging-sessions/1
+Accept: application/json
+If-Match: 1
+Content-Type: application/json
+Authorization: Basic customer password
+
+{
+  "errorMessage": "Some error"
+}

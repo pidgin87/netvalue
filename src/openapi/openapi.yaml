@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: Application for managing charge stations
+  description: Application for managing charge stations
+  version: 0.0.1
+
+paths:
+
+  /versions:
+    $ref: operation/versions.yaml
+  /charge-points/{serialNumber}/connectors:
+    $ref: operation/charge-points-id-connector.yaml
+  /charging-sessions:
+    $ref: operation/charging-sessions.yaml
+  /charging-sessions/{sessionId}:
+    $ref: operation/charging-sessions-id.yaml
+  /charging-sessions/filters:
+    $ref: operation/charging-sessions-filters.yaml

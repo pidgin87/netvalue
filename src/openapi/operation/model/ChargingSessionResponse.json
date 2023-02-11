@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "title": "ChargingSessionResponse",
+    "description": "Response with charging session",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "format": "int64"
+        },
+        "rfIdTag": {
+            "type": "object",
+            "description": "RFID tag",
+            "properties": {
+                "tagName": {
+                    "type": "string"
+                },
+                "tagNumber": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "tagName",
+                "tagNumber"
+            ]
+        },
+        "chargeConnector": {
+            "type": "object",
+            "description": "Charge connector",
+            "properties": {
+                "connectorNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "meterValue": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "connectorNumber",
+                "meterValue"
+            ]
+        },
+        "vehicle": {
+            "type": "object",
+            "description": "Vehicle",
+            "properties": {
+                "vehicleName": {
+                    "type": "string",
+                    "maxlength": 255
+                },
+                "registrationPlate": {
+                    "type": "string",
+                    "maxLength": 15
+                }
+            },
+            "required": [
+                "vehicleName",
+                "registrationPlate"
+            ]
+        },
+        "startTime": {
+            "type": "string",
+            "description": "Time when session started"
+        },
+        "endTime": {
+            "type": "string",
+            "description": "Time when session ended"
+        },
+        "errorMessage": {
+            "type": "string",
+            "description" : "Error message if error occurred"
+        }
+    },
+    "required": [
+        "id",
+        "rfIdTag",
+        "connector",
+        "startDate",
+        "vehicle",
+        "startTime"
+    ]
+}

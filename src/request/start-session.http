@@ -1,0 +1,13 @@
+### Send POST request: start charging session
+POST http://localhost:8080/charging-sessions
+Accept: application/json
+Content-Type: application/json
+Authorization: Basic customer password
+
+{
+    "rfIdTagNumber": "86a06f1e-1009-487d-ad31-bee7553c58de",
+    "vehicleRegistrationPlate": "343-738",
+    "pointSerialNumber": "number1",
+    "connectorNumber": 123,
+    "startMeter": 1
+}

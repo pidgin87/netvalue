@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/changelog-ddl.yaml
+  - include:
+      file: db/changelog/changes/changelog-dict.yaml
+  - include:
+      file: db/changelog/changes/changelog-dml-dev.yaml
+      context: dev

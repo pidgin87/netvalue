@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "title": "StartSessionRequest",
+    "description": "Request for start charging session",
+    "properties": {
+        "rfIdTagNumber": {
+            "type": "string",
+            "maxLength": 36,
+            "description": "RFID tag number"
+        },
+        "vehicleRegistrationPlate": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "Vehicle registration plate"
+        },
+        "pointSerialNumber": {
+            "type": "string",
+            "maxlength": 100,
+            "description": "Charge point serial number"
+        },
+        "connectorNumber": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Charge connector number"
+        },
+        "startMeter": {
+            "type": "integer",
+            "description": "Meter value before charging (Wh)",
+            "min": 0
+        }
+    },
+    "required": [
+        "rfIdTagNumber",
+        "vehicleRegistrationPlate",
+        "pointSerialNumber",
+        "connectorNumber",
+        "startMeter"
+    ]
+}

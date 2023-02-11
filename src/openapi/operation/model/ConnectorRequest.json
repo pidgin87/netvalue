@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "title": "ConnectorRequest",
+    "description": "Request with connector",
+    "properties": {
+        "connectorNumber": {
+            "type": "integer",
+            "format": "int64",
+            "description": "The number of connector in current charge point",
+            "min": 0
+        }
+    },
+    "required": [
+        "connectorNumber"
+    ]
+}

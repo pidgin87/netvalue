@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "title": "ErrorResponse",
+    "description": "Request for end charging session",
+    "properties": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Time errors"
+        },
+        "status": {
+            "type": "integer",
+            "format": "int32",
+            "description": "http code"
+        },
+        "error": {
+            "type": "string",
+            "description": "description error"
+        },
+        "path": {
+            "type": "string",
+            "description": "request path"
+        }
+    }
+}

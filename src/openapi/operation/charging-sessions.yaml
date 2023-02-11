@@ -1,0 +1,38 @@
+post:
+  operationId: startSession
+  description: "Start charging session"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/StartSessionRequest.json'
+  responses:
+    200:
+      description: OK
+    201:
+      description: Created
+    400:
+      description: Bad request
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
+    404:
+      description: Resources not found
+      content:
+        application/json:
+          schema:
+            $ref: 'model/ErrorResponse.json'
+    409:
+      description: Session already started
+      content:
+        application/json:
+          schema:
+            $ref: 'model/ErrorResponse.json'
+    500:
+      description: internal error
+      content:
+        application/json:
+          schema:
+            $ref: 'model/ErrorResponse.json'
